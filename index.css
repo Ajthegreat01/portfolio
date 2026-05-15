@@ -272,7 +272,7 @@ nav{
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
+    repeat(auto-fit,minmax(280px,1fr)); 
 
     gap:1.5rem;
 
@@ -296,6 +296,49 @@ nav{
 
     border-color:var(--primary);
 }
+
+
+
+.cert-image-box {
+    width: 100%;
+    height: 180px;      
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.cert-thumbnail:hover {
+    transform: scale(1.08);
+}
+
+.cert-verify-link {
+    display: block;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.cert-verify-link:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+
 
 .info-card i{
     font-size:2rem;
@@ -363,8 +406,6 @@ nav{
     line-height: 1.8;
 }
 
-
-
 @media(max-width:900px){
 
     .hero{
@@ -402,7 +443,6 @@ nav{
         font-size:2.5rem;
     }
 
-    
     .about-content {
         flex-direction: column;
         gap: 1.5rem;

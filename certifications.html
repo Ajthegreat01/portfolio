@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications</title>
+    <title>Certifications | Alfred Joseph Mayormente</title>
+    
     <link rel="stylesheet" href="index.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,6 +16,11 @@
 <header>
     <nav>
         <a href="index.html" class="logo">Hi, I'm Alfred Joseph Mayormente</a>
+        
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -23,54 +31,45 @@
     </nav>
 </header>
 
-<section class="cert-section">
-    <h1>My Certifications</h1>
+<section class="page-section">
+    <div class="page-container">
+        <h1 class="page-title">My Certifications</h1>
+        <p class="page-description">
+            Verification of my technical skills and professional training. Click any image to enlarge.
+        </p>
 
-    <div class="cert-grid">
-        <div class="cert-card">
-            <div class="img-container">
-                <img src="mayormente.jpg" alt="Web Development Certificate" class="cert-img" onclick="openModal(this.src)">
+        <div class="card-grid">
+            
+            <div class="info-card">
+                <div class="cert-image-box">
+                    <img src="mayormente.jpg" alt="Web Development" class="cert-thumbnail" onclick="openModal(this.src)">
+                </div>
+                <a href="https://verification-link.com/cert1" target="_blank" class="cert-verify-link">
+                    Web Development Certificate
+                </a>
             </div>
-            <a href="https://verification-link.com/cert1" target="_blank" class="cert-label">
-                Web Development Certificate
-            </a>
-        </div>
 
-        <div class="cert-card">
-            <div class="img-container">
-                <img src="mayormente.jpg" alt="Java Programming Certificate" class="cert-img" onclick="openModal(this.src)">
+            <div class="info-card">
+                <div class="cert-image-box">
+                    <img src="mayormente.jpg" alt="Java Programming" class="cert-thumbnail" onclick="openModal(this.src)">
+                </div>
+                <a href="https://verification-link.com/cert2" target="_blank" class="cert-verify-link">
+                    Java Programming Certificate
+                </a>
             </div>
-            <a href="https://verification-link.com/cert2" target="_blank" class="cert-label">
-                Java Programming Certificate
-            </a>
-        </div>
 
-        <div class="cert-card">
-            <div class="img-container">
-                <img src="mayormente.jpg" alt="Database Management Certificate" class="cert-img" onclick="openModal(this.src)">
+            <div class="info-card">
+                <div class="cert-image-box">
+                    <img src="mayormente.jpg" alt="Database Management" class="cert-thumbnail" onclick="openModal(this.src)">
+                </div>
+                <a href="https://verification-link.com/cert3" target="_blank" class="cert-verify-link">
+                    Database Management Certificate
+                </a>
             </div>
-            <a href="https://verification-link.com/cert3" target="_blank" class="cert-label">
-                Database Management Certificate
-            </a>
+
         </div>
     </div>
 </section>
-
-<div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="fullImg">
-</div>
-
-<script>
-    function openModal(src) {
-        document.getElementById("imageModal").style.display = "block";
-        document.getElementById("fullImg").src = src;
-    }
-
-    function closeModal() {
-        document.getElementById("imageModal").style.display = "none";
-    }
-</script>
 
 </body>
 </html>

@@ -48,7 +48,6 @@ document.querySelectorAll('.cert-thumbnail').forEach(image => {
         modal.onclick = () => modal.remove();
     };
 });
-
 // Add scroll effect to header
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
