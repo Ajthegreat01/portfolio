@@ -5,7 +5,7 @@
 }
 
 :root{
-    --primary:#850f3c;
+    --primary:#850f1f;
     --primary-dark:#71830a;
     --bg-dark:#ee9b1e;
     --bg-darker:#17b809;
@@ -67,6 +67,7 @@ nav{
 .nav-links .active{
     color:var(--primary);
 }
+
 
 /* --- HERO SECTION --- */
 .hero {

@@ -29,6 +29,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (header) {
@@ -73,3 +74,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
