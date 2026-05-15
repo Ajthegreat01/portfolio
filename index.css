@@ -136,15 +136,17 @@ nav{
     gap: 1rem;
 }
 
-.social-links a {
+.social-links a i {
+    font-size: 2rem; 
     color: var(--white);
-    font-size: 1.2rem;
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
-.social-links a:hover {
+.social-links a i:hover {
+    transform: scale(1.2); 
     color: var(--primary);
 }
+
 
 .hero-image {
     flex: 1;
