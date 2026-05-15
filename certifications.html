@@ -6,9 +6,7 @@
     <title>Certifications | Alfred Joseph Mayormente</title>
     
     <link rel="stylesheet" href="index.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -39,28 +37,31 @@
             
             <div class="info-card">
                 <div class="cert-image-box">
-                    <img src="python-essentials.png" alt="Python Essentials" class="cert-thumbnail" onclick="openModal(this.src)">
+                    <img src="python-essentials.png" alt="Python Essentials" class="cert-thumbnail">
                 </div>
-                <a href="https://www.netacad.com/certificates/?issuanceId=7d563786-cb20-4927-a12f-fadef3be22be" target="_blank" class="cert-verify-link">
-                    Python Essentials Certificate
+                <h3>Python Essentials 1</h3>
+                <a href="file:///C:/Users/Hello/Downloads/PythonEssentials1Update20260515-31-2xep6x.pdf" target="_blank" class="cert-verify-link">
+                    Verify Certificate <i class="fas fa-external-link-alt"></i>
                 </a>
             </div>
 
             <div class="info-card">
                 <div class="cert-image-box">
-                    <img src="it-specialist-java.png" alt="IT Specialist - Java" class="cert-thumbnail" onclick="openModal(this.src)">
+                    <img src="it-specialist-java.png" alt="IT Specialist - Java" class="cert-thumbnail">
                 </div>
+                <h3>IT Specialist - Java</h3>
                 <a href="https://www.credly.com/earner/earned/badge/447a48bc-6297-4eaf-b68f-1b4764d76752" target="_blank" class="cert-verify-link">
-                    IT Specialist - Java Certificate
+                    Verify Certificate <i class="fas fa-external-link-alt"></i>
                 </a>
             </div>
 
             <div class="info-card">
                 <div class="cert-image-box">
-                    <img src="networking-basics.png" alt="Networking Basics" class="cert-thumbnail" onclick="openModal(this.src)">
+                    <img src="networking-basics.png" alt="Networking Basics" class="cert-thumbnail">
                 </div>
-                <a href="https://www.netacad.com/certificates/?issuanceId=b47a38c1-473f-4a69-beb1-33b6ef7cc4b4" target="_blank" class="cert-verify-link">
-                    Networking Basics Certificate
+                <h3>Networking Basics</h3>
+                <a href="file:///C:/Users/Hello/Downloads/NetworkingBasicsUpdate20260515-31-1rtsng.pdf" target="_blank" class="cert-verify-link">
+                    Verify Certificate <i class="fas fa-external-link-alt"></i>
                 </a>
             </div>
 
@@ -68,5 +69,11 @@
     </div>
 </section>
 
+<div id="certModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="imgZoom">
+</div>
+
+<script src="index.js"></script>
 </body>
 </html>
