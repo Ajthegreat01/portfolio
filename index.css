@@ -7,14 +7,14 @@
 }
 
 :root{
-    --primary:#38bdf8;
-    --primary-dark:#0ea5e9;
+    --primary:#850f3c;
+    --primary-dark:#71830a;
 
-    --bg-dark:#0f172a;
-    --bg-darker:#020617;
+    --bg-dark:#ee9b1e;
+    --bg-darker:#17b809;
 
     --text-light:#e2e8f0;
-    --text-muted:#94a3b8;
+    --text-muted:#ffffff;
 
     --white:#ffffff;
 }
@@ -349,9 +349,6 @@ nav{
     color:var(--primary);
 }
 
-/* --- NEW ABOUT ME CONTENT WRAPPER --- */
-
-/* This turns your about section paragraphs into columns */
 .about-content {
     display: flex;
     gap: 3rem;
@@ -366,7 +363,7 @@ nav{
     line-height: 1.8;
 }
 
-/* --- RESPONSIVE QUERIES --- */
+
 
 @media(max-width:900px){
 
@@ -405,7 +402,7 @@ nav{
         font-size:2.5rem;
     }
 
-    /* Stack paragraphs on small screens */
+    
     .about-content {
         flex-direction: column;
         gap: 1.5rem;

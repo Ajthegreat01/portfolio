@@ -4,48 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<section>
+<header>
+    <nav>
+        <a href="index.html" class="logo">Hi, I'm Alfred Joseph Mayormente</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="techstack.html">Tech Stack</a></li>
+            <li><a href="certifications.html" class="active">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
+<section class="cert-section">
     <h1>My Certifications</h1>
 
-    <div>
-
-        <div>
-            <a href="https://example.com" target="_blank">
-                <img src="images/cert1.jpg" alt="Certificate 1">
-            </a>
-
-            <a href="https://example.com" target="_blank">
+    <div class="cert-grid">
+        <div class="cert-card">
+            <div class="img-container">
+                <img src="mayormente.jpg" alt="Web Development Certificate" class="cert-img" onclick="openModal(this.src)">
+            </div>
+            <a href="https://verification-link.com/cert1" target="_blank" class="cert-label">
                 Web Development Certificate
             </a>
         </div>
 
-        <div>
-            <a href="https://example.com" target="_blank">
-                <img src="images/cert2.jpg" alt="Certificate 2">
-            </a>
-
-            <a href="https://example.com" target="_blank">
+        <div class="cert-card">
+            <div class="img-container">
+                <img src="mayormente.jpg" alt="Java Programming Certificate" class="cert-img" onclick="openModal(this.src)">
+            </div>
+            <a href="https://verification-link.com/cert2" target="_blank" class="cert-label">
                 Java Programming Certificate
             </a>
         </div>
 
-        <div>
-            <a href="https://example.com" target="_blank">
-                <img src="images/cert3.jpg" alt="Certificate 3">
-            </a>
-
-            <a href="https://example.com" target="_blank">
+        <div class="cert-card">
+            <div class="img-container">
+                <img src="mayormente.jpg" alt="Database Management Certificate" class="cert-img" onclick="openModal(this.src)">
+            </div>
+            <a href="https://verification-link.com/cert3" target="_blank" class="cert-label">
                 Database Management Certificate
             </a>
         </div>
-
     </div>
-
 </section>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImg">
+</div>
+
+<script>
+    function openModal(src) {
+        document.getElementById("imageModal").style.display = "block";
+        document.getElementById("fullImg").src = src;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+</script>
 
 </body>
 </html>
