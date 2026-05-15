@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications | Alfred Joseph Mayormente</title>
-    
+    <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,13 +13,16 @@
 
 <header>
     <nav>
-        <a href="index.html" class="logo">Hi, I'm Alfred Joseph Mayormente</a>
+        <a href="index.html" class="logo">Aj</a>
         
-        <div class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
+        
+           <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation" aria-expanded="false" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links" aria-hidden="true">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="techstack.html">Tech Stack</a></li>
@@ -45,7 +48,15 @@
                 </a>
             </div>
 
-        
+            <div class="info-card">
+                <div class="cert-image-box">
+                    <img src="java.png" alt="IT Specialist - Java" class="cert-thumbnail">
+                </div>
+                <h3>IT Specialist - Java</h3>
+                <a href="https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&format=pdf&id=472" target="_blank" class="cert-verify-link">
+                    Verify Certificate <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
 
             <div class="info-card">
                 <div class="cert-image-box">

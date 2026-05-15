@@ -5,10 +5,10 @@
 }
 
 :root{
-    --primary:#850f1f;
-    --primary-dark:#71830a;
-    --bg-dark:#ee9b1e;
-    --bg-darker:#17b809;
+    --primary:#07108d;
+    --primary-dark:#02bebe;
+    --bg-dark:#1e90eec2;
+    --bg-darker:#09b89b;
     --text-light:#e2e8f0;
     --text-muted:#ffffff;
     --white:#ffffff;
@@ -67,6 +67,45 @@ nav{
 .nav-links .active{
     color:var(--primary);
 }
+
+/* Hamburger styling */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Navigation links hidden by default on mobile */
+.nav-links {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
 
 
 /* --- HERO SECTION --- */
@@ -372,7 +411,6 @@ nav{
 }
 
 @media(max-width:768px){
-    .nav-links { display:none; }
     .page-title { font-size:2.5rem; }
     .close-modal { right: 20px; top: 20px; }
 
@@ -381,3 +419,46 @@ nav{
         text-align: center;
     }      
 }     
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  --primary:#07108d;
+    --primary-dark:#02bebe;
+    --bg-dark:#1e90eec2;
+    --bg-darker:#09b89b;
+    --text-light:#e2e8f0;
+    --text-muted:#ffffff;
+    --white:#ffffff;
+}
+
+.contact-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem;
+  width: 400px; /* controls the square size */
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-box h2 {
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.contact-box i {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  color: var(--white);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-box a:hover i {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+

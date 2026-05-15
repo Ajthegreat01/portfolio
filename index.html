@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Alfred Joseph Mayormente | Web Developer</title>
-
-    
+    <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet"
@@ -17,22 +16,26 @@
 
     
     <header>
-        <nav>
+    <nav>
+        <a href="index.html" class="logo">
+            Aj
+        </a>
 
-            <a href="index.html" class="logo">
-            Alfred Joseph Mayormente
-            </a>
+        <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation" aria-expanded="false" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="techstack.html">Tech Stack</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-        </nav>
-    </header>
+        <ul class="nav-links" id="nav-links" aria-hidden="true">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="techstack.html">Tech Stack</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
     
     <main>

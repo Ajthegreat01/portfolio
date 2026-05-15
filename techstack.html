@@ -7,7 +7,7 @@
     <title>Tech Stack | Alfred Joseph Mayormente</title>
 
     <link rel="stylesheet" href="index.css">
-
+    <script src="index.js"></script>
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,9 +16,14 @@
 
 <header>
     <nav>
-        <a href="index.html" class="logo">Hi, I'm Alfred Joseph Mayormente</a>
+        <a href="index.html" class="logo">Aj</a>
+         <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation" aria-expanded="false" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links" aria-hidden="true">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="techstack.html" class="active">Tech Stack</a></li>
@@ -39,49 +44,55 @@
             <div class="info-card">
                 <i class="fab fa-html5"></i>
                 <h3>HTML</h3>
-                <p>Structure of web pages</p>
+              
             </div>
 
             <div class="info-card">
                 <i class="fab fa-css3-alt"></i>
                 <h3>CSS</h3>
-                <p>Website styling and layouts</p>
+                
             </div>
 
             <div class="info-card">
                 <i class="fab fa-js"></i>
                 <h3>JavaScript</h3>
-                <p>Interactive website features</p>
+                
             </div>
 
             <div class="info-card">
                 <i class="fab fa-java"></i>
                 <h3>Java</h3>
-                <p>Desktop and backend development</p>
+                
             </div>
 
             <div class="info-card">
                 <i class="fas fa-code"></i>
                 <h3>VS Code</h3>
-                <p>Code editor for development</p>
+                
             </div>
 
             <div class="info-card">
                 <i class="fab fa-git-alt"></i>
                 <h3>Git</h3>
-                <p>Version control system</p>
+                
+            </div>
+
+              <div class="info-card">
+                <i class="fab fa-android"></i>
+                <h3>Android Studio</h3>
+                
             </div>
 
             <div class="info-card">
                 <i class="fab fa-github"></i>
                 <h3>GitHub</h3>
-                <p>Repository hosting platform</p>
+                
             </div>
 
             <div class="info-card">
                 <i class="fas fa-database"></i>
                 <h3>PostgreSQL</h3>
-                <p>Database management system</p>
+                
             </div>
 
         </div>
