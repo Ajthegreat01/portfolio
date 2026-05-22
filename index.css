@@ -354,6 +354,22 @@ nav{
     object-fit: contain;
     margin-bottom: 15px;
 }
+img[alt="CSS Logo"]{
+    width: 120px;
+    height: 120px;
+}
+
+/* Bigger JavaScript logo */
+img[alt="JavaScript Logo"]{
+    width: 120px;
+    height: 120px;
+}
+
+/* Bigger Java logo */
+img[alt="Java Logo"]{
+    width: 120px;
+    height: 120px;
+}
 
 .info-card {
     display: flex;
