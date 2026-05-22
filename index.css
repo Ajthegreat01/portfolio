@@ -213,35 +213,45 @@ nav{
 
 .about-section {
     min-height: 100vh;
-    padding: 8rem 2rem 4rem;
+    padding: 2rem 2rem 2rem; /* reduced top space */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .about-title {
     font-size: 3rem;
     font-weight: 700;
     color: var(--white);
-    text-align: center;
+    margin-top: 1rem; /* move title upward */
     margin-bottom: 2rem;
-    opacity: 0;
-    animation: fadeIn 1.2s ease forwards;
+    text-align: center;
 }
 
 .about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* two equal columns */
-    gap: 3rem;
+    max-width: 1000px;
+    width: 100%;
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 16px;
     padding: 3rem;
-    max-width: 1100px;
-    opacity: 0;
-    animation: fadeIn 1.8s ease forwards;
-    animation-delay: 0.5s;
+    color: var(--text-light);
+    line-height: 2;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.about-container strong {
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.about-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
 .about-column p {
@@ -249,6 +259,11 @@ nav{
     color: var(--text-light);
     font-size: 1rem;
     line-height: 1.8;
+}
+
+.about-column p:first-child {
+    margin-bottom: 1rem;
+    color: var(--white);
 }
 
 /* --- FADE-IN ANIMATION --- */
@@ -266,11 +281,19 @@ nav{
 /* --- RESPONSIVE FIX --- */
 @media (max-width: 768px) {
     .about-container {
-        grid-template-columns: 1fr; /* stack vertically on mobile */
+        grid-template-columns: 1fr;
         padding: 2rem;
+        text-align: center;
+    }
+
+    .about-column {
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
     }
 }
-
 
 
 
@@ -353,9 +376,9 @@ nav{
 .cert-thumbnail {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
+    object-fit: contain;
     cursor: zoom-in;
-    transition: transform 0.4s ease, opacity 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .cert-thumbnail:hover {
@@ -384,56 +407,66 @@ nav{
 }
 
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 2000; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9); 
-    backdrop-filter: blur(5px);
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(6px);
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
+/* SHOW MODAL */
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* ZOOMED IMAGE */
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 85%;
-    max-width: 900px;
-    max-height: 80vh;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
     object-fit: contain;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 10px;
-    animation: zoomIn 0.3s ease-out;
+    border-radius: 15px;
+
+    transform: scale(0.6);
+    opacity: 0;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
 }
 
+/* ACTIVE ZOOM EFFECT */
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* CLOSE BUTTON */
 .close-modal {
     position: absolute;
-    top: 30px;
-    right: 50px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
+    top: 25px;
+    right: 35px;
+    font-size: 2.5rem;
+    color: white;
     cursor: pointer;
-    z-index: 2100;
+    z-index: 10000;
+    transition: 0.3s;
 }
 
-@keyframes zoomIn {
-    from { transform: translateY(-50%) scale(0.8); opacity: 0; }
-    to { transform: translateY(-50%) scale(1); opacity: 1; }
+.close-modal:hover {
+    transform: scale(1.2);
+    color: #02bebe;
 }
-
-@media(max-width:768px){
-    .page-title { font-size:2.5rem; }
-    .close-modal { right: 20px; top: 20px; }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }      
-}     
 
 /* --- CONTACT SECTION --- */
 .contact-section {
