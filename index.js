@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
 
+    function closeMenu() {
+        navLinks.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+        navLinks.setAttribute("aria-hidden", "true");
+    }
+
     if (hamburger) {
         hamburger.addEventListener("click", () => {
             navLinks.classList.toggle("active");
@@ -13,6 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             hamburger.setAttribute("aria-expanded", !expanded);
             navLinks.setAttribute("aria-hidden", expanded);
+        });
+
+        // Close menu when clicking on nav links
+        const navItems = navLinks.querySelectorAll("a");
+        navItems.forEach(link => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                closeMenu();
+            }
         });
     }
 
